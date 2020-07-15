@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <script>
+        /*
+        - usuário entrar com várias idades. OK
+        - exibir quantas pessoas são maior de idade e quantas são menor de idade. OK
+        */
+        var contaMaior = 0;
+        var contaMenor = 0;
+        while (idade != -1){
+            var idade = parseInt(prompt("Digite uma idade, quando quiser encerrar digite -1"));
+            if (idade >= 18){
+                contaMaior++;
+            }else{
+                contaMenor++;
+            }
+        }
+        document.write(`Número de pessoas com 18 anos ou mais é ${contaMaior} <br>`);
+        document.write(`Número de pessoas menores do que 18 anos é ${contaMenor -1} <br>`);
+    </script>
+</body>
+</html>

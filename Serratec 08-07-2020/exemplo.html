@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 08-07-2020-Manhã</title>
+    </head>
+    <body>
+        <script>
+            /*
+                Entender
+                Problema: Criar um sistema que receba 3 notas.
+                Devolver as notas e a soma delas.
+                Se a soma for menor que 60, informar que ele foi reprovado.
+                Se acima ou igual 60, informar que foi aprovado.
+
+                Planejar
+                1 - Criar uma forma de receber 3 notas. OK
+                2 - Devolver as notas pro usuário. OK
+                3 - Somar as notas e devolver para o usuário. OK
+                4 - Avaliar a soma. OK
+                    5.1 - Se menor que 60 mostrar que foi reprovado. OK
+                    5.2 - Se maior ou igual, mostrar que foi aprovado. OK
+                
+                Executar
+                    OK
+                
+                Revisar
+                1 - Deve ser possível informar as 3 notas. OK
+                2 - Deve ser possível visualizar as 3 notas. OK
+                3 - Deve ser possível visualizar a soma das notas. OK
+                4 - Verificar se cálculo está correto. OK
+                5 - Deve ser possível visualizar a aprovação/reprovação. OK
+                6 - Deve zerar os valores caso não informe o número. OK
+
+            */ 
+            var primeiraNota = parseInt(prompt("Digite a primeira nota"));
+            var segundaNota = parseInt(prompt("Digite a segunda nota"));
+            var terceiraNota = parseInt(prompt("Digite a terceira nota")); 
+
+            if(isNaN(primeiraNota)){
+                primeiraNota = 0;
+            }    
+            if(isNaN(segundaNota)){
+                segundaNota = 0;
+            }
+            if(isNaN(terceiraNota)){
+                terceiraNota = 0;
+            }
+
+            document.write("Primeira Nota: " + primeiraNota + "<br>");
+            document.write("Segunda Nota: " + segundaNota + "<br>");
+            document.write("Terceira Nota: " + terceiraNota + "<br>");
+
+            soma = primeiraNota + segundaNota + terceiraNota;
+
+            document.write("Soma das Notas: " + soma + "<br>");
+
+            if(soma < 60){
+                document.write('<h1 style="color: red">Reprovado</h1>');
+            }else{
+                document.write('<h1 style="color: blue">Aprovado</h1>');
+            }
+            
+        </script>
+    </body>
+</html>   

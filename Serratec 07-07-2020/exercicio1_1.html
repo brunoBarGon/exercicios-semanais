@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+</head>
+<body>
+    <script>
+        var nome = prompt("Digite seu nome: ");
+       
+        var nota1 = parseInt(prompt("Digite sua primeira nota"));
+        var nota2 = parseInt(prompt("Digite sua segunda nota"));
+        var nota3 = parseInt(prompt("Digite sua terceira nota"));
+        var nota4 = parseInt(prompt("Digite sua quarta nota"));
+       
+        document.write("Aluno: " + nome + '<br>');
+        document.write("Primeira Nota: " + nota1 + '<br>');
+        document.write("Segunda Nota: " + nota2 + '<br>');
+        document.write("Terceira Nota: " + nota3 + '<br>');
+        document.write("Quarta Nota: " + nota4 + '<br>');
+       
+        var soma = nota1 + nota2 + nota3 + nota4;
+        var media = soma / 4;
+       
+        document.write("A soma das notas foi: " + soma);
+        document.write("<br>A media foi: " + media);
+    </script>
+</body>
+</html>

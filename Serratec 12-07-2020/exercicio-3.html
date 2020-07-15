@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 3</title>
+</head>
+<body>
+    <script>
+        var numero = [null];
+        var maior = numero[0];
+            for (var i = 0; i < 5; i++){
+                numero[i] = parseFloat(prompt("Digite um número"));
+                if (numero[i] > maior){
+                    maior = numero[i];
+                }
+            }
+        document.write(`O maior número digitado é ${maior}`);    
+    </script>
+</body>
+</html>

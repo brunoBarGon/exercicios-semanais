@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var primeiraNota = parseInt(prompt("Digite a primeira nota"));
+        var segundaNota = parseInt(prompt("Digite a segunda nota"));
+        var terceiraNota = parseInt(prompt("Digite a terceira nota")); 
+
+        if(isNaN(primeiraNota)){
+            primeiraNota = 0;
+        }    
+        if(isNaN(segundaNota)){
+            segundaNota = 0;
+        }
+        if(isNaN(terceiraNota)){
+            terceiraNota = 0;
+        }
+
+        document.write("Primeira Nota: " + primeiraNota + "<br>");
+        document.write("Segunda Nota: " + segundaNota + "<br>");
+        document.write("Terceira Nota: " + terceiraNota + "<br>");
+
+        soma = primeiraNota + segundaNota + terceiraNota;
+
+        document.write("Soma das Notas: " + soma + "<br>");
+        if(soma < 40){
+            document.write('<h1 style="color: red">Reprovado!</h1>');
+        }else if(soma >= 40 && soma < 60){
+            document.write('<h1 style="color: green">Recuperação!</h1>');
+        }else{
+            document.write('<h1 style="color: blue">Aprovado!</h1>');
+        }
+    </script>
+</body>
+</html>

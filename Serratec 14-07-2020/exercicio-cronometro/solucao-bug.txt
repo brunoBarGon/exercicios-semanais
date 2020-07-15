@@ -1,0 +1,36 @@
+function a() {
+   newSetInterval(b, 1000); 
+   updateText("still working");
+}
+function b() {
+   timer++;
+   updateText(timer);
+}
+function newSetInterval(callback, duration, callbackArguments) {
+    callback.apply(this, callbackArguments);
+    var args = arguments,
+        scope=this;
+
+    setTimeout(function() {
+        newSetInterval.apply(scope, args);
+    }, duration);
+}
+
+function interval(func, wait, times){
+    var interv = function(w, t){
+        return function(){
+            if(typeof t === "undefined" || t-- > 0){
+                setTimeout(interv, w);
+                try{
+                    func.call(null);
+                }
+                catch(e){
+                    t = 0;
+                    throw e.toString();
+                }
+            }
+        };
+    }(wait, times);
+
+    setTimeout(interv, wait);
+};

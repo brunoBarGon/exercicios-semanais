@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopos</title>
+</head>
+<body>
+    <script>
+        // Aqui fora é um escopo Global
+        var nome = 'Fulano';
+        document.write(nome);
+        
+        // Geralmente chamamos isso de Function Scope.
+        function mostrarNome(){
+            // Aqui dentro da função é um escopo Local.
+            document.write(nome);
+        }
+        // as variáveis criadas em contexto local tem prioridade sobre as mesmas variáveis em contexto global.
+
+    </script>
+</body>
+</html>

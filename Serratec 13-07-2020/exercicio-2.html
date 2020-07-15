@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+<body>
+    <script>
+        function contaLetra(){
+            var letra = prompt("Digite uma letra").toLowerCase();
+            var texto = prompt("Digite um texto").toLowerCase();
+            document.write(`São ${texto.split(letra).length -1} as ocorrências da letra escolhida no texto.`);    
+        }
+        contaLetra();  
+    </script>
+</body>
+</html>

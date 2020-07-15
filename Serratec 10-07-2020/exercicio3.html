@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <script>
+        function temHabilidade(skills) {
+            var jS = skills.indexOf("Javascript", 0);
+                if(jS >= 0){ // ao usar o indexOf ele procura no array se existe o índice.  
+                    document.write("True"); // Caso exista retorna >= 0. No caso True.
+                }else{
+                    document.write("False"); // Caso não exista retorna -1. No caso False.
+                }    
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills); // true ou false
+    </script>
+</body>
+</html>

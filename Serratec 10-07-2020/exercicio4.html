@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <script>
+        var candidato = prompt("Digite seu nome: ");
+        function experiencia(anos) {
+            if(anos < 1){
+                document.write(`${candidato} tem nível Iniciante`);
+            }else if(anos >= 1 && anos < 3){         
+                document.write(`${candidato} tem nível Intermediário`);
+            }else if(anos >= 3 && anos < 6){
+                document.write(`${candidato} tem nível Avançado`);
+            }else{
+                document.write(`${candidato} tem nível Jedi Master`);                    
+            }
+        }
+        var anosEstudo = parseInt(prompt("Digite sua experiência em desenvolvimento (em anos)"));
+        experiencia(anosEstudo);
+       
+    </script>
+</body>
+</html>

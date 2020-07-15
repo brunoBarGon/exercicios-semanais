@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firulas</title>
+</head>
+<body>
+    <label for="nome-usuario">Digite seu nome</label>
+    <input id="nome-usuario" type="text">
+    <form>
+        <label for="email">Email</label><br>
+        <input id="email" type="email" placeholder="exemplo@exemplo.com" required>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" required>
+        <label for="lembrar-senha">Lembrar Senha</label>
+        <input id="lembrar-senha" type="checkbox"><br><br><br>
+       <!--<input type="submit" value="Entrar"> --> 
+        <button type="submit" onclick="login()">Entrar</button>
+        <button type="reset">Limpar</button>    
+
+    </form>
+    <script>
+        var usuario = document.getElementById("nome-usuario");
+        var usuario = document.querySelector("#nome-usuario");
+
+        var email = document.getElementById("email");
+        var senha = document.getElementById("senha");
+        function login(){
+            if(verificarAcesso(email.value, senha.value)){
+                alert("Bem vindo ao nosso sistema");
+            }else{
+                alert("Usuário e/ou senha inválidos");
+            }
+        }
+        function verificarAcesso(email, senha){
+            if(email.toLowerCase() == 'admin@admin.com' && senha == '123'){
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

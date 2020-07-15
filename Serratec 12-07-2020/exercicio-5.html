@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 5</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um programa que entre com os dados de altura e sexo de 5 pessoas. OK
+        Exibir na tela quantas são do sexo masculino e quantas são do sexo feminino. OK
+        Mostrar qual é a maior altura e a quem pertence essa altura (homem ou mulher). OK
+        */
+        var usuarios = [
+            {
+            nome: 'Diego',
+            altura: 1.75,
+            sexo: 'masculino',
+            },
+            {
+            nome: 'Gabriel',
+            altura: 1.66,
+            sexo: 'masculino',
+            },
+            {
+            nome: 'Daniela',
+            altura: 1.83,
+            sexo: 'feminino',
+            },
+            {
+            nome: 'Carolina',
+            altura: 1.63,
+            sexo: 'feminino',
+            },
+            {
+            nome: 'Mariana',
+            altura: 1.69,
+            sexo: 'feminino',
+            },
+
+        ];
+        var contaFeminino = 0;
+        var contaMasculino = 0;    
+        function genero(){
+            for (caracteristicas of usuarios){
+                var sexo = caracteristicas.sexo;
+                if(sexo == 'feminino'){
+                contaFeminino++;
+                }else{
+                contaMasculino++;
+                }
+            }
+        }
+        function maiorAlturaDeTodos(){
+            var maiorAltura = usuarios[0].altura;
+            for (caracteristicas of usuarios){
+                var alturaIndividual = caracteristicas.altura;
+                if (alturaIndividual > maiorAltura){
+                    maiorAltura = alturaIndividual;
+                    var maiorPessoa = caracteristicas.nome;
+                }
+            }
+            document.write(`A maior altura ${maiorAltura} é de ${maiorPessoa} <br>`);            
+        }   
+        maiorAlturaDeTodos();
+        genero();
+        document.write(`São ${contaFeminino} mulheres. <br>`);
+        document.write(`São ${contaMasculino} homens. <br>`); 
+    </script>
+</body>
+</html>

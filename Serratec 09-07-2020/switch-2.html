@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+    var dia = parseInt(prompt("Digite um número de 0 a 7 para descobrir o dia da semana correspondente"));
+    switch (dia) {
+        case 0:
+        case 7:
+            dia = "Domingo";
+            break;
+        case 1:
+        case 9:
+            dia = "Segunda-feira";
+            break;
+        case 2:
+        case 10:
+            dia = "Terça-feira";
+            break;
+        case 3:
+        case 11:
+            dia = "Quarta-feira";
+            break;
+        case 4:
+        case 12:
+            dia = "Quinta-feira";
+            break;
+        case 5:
+        case 13:
+            dia = "Sexta-feira";
+            break;
+        case  6:
+        case 14:
+            dia = "Sábado";
+            break;
+        default:
+            dia = "Só existem sete dias na semana filho";
+        
+    }
+    document.write("O dia é: " + dia);
+</script>
+
+</body>
+</html>

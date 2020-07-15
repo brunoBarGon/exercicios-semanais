@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 6</title>
+</head>
+<body>
+    <script>
+        var tamanho =  parseInt(prompt("Quantos nomes deseja inserir?"));
+        var nomes = [""];
+        for (var i = 0; i < tamanho; i++){
+            nomes.push(prompt(`Digite um nome.`));
+        }
+        function reverterOrdem(){
+            nomes.reverse();
+            document.write(`Os nomes na ordem inversa são: ${nomes} <br>`);
+        }
+        reverterOrdem();
+    </script>
+</body>
+</html>

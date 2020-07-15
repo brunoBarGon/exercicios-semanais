@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Dinâmica</title>
+</head>
+<body>
+    <h2 style="color: rebeccapurple; border:2px Solid blueviolet">Tabuada Dinâmica</h2>
+    <body style="background-color:lightgray;"></body>
+    <script>
+        var nome = prompt("Digite seu nome");
+        alert("Bem vindo "+ nome + "! Aprenda agora tabuada com apenas dois cliques!");
+        var numero = parseInt(prompt("Digite o número que que você quer multiplicar"));
+        var multNumero = parseInt(prompt("Quantas vezes você quer multiplicar"));
+        var pulaLinha = "<br>" ;
+
+        while(isNaN(numero)){
+            var numero = parseInt(prompt("Digite o número que que você quer multiplicar"));
+        }
+        while(isNaN(multNumero)){
+            var multNumero = parseInt(prompt("Digite o número que que você quer multiplicar"));
+        }  
+        for (var i=0; i <= multNumero; i++){
+            var resultado = numero * i;
+            if (resultado%2 == 0){
+                resultado = resultado + '<h4 style="color: orangered"><em>é Par!</em></h4>'; 
+            }else{
+                resultado = resultado + '<h4 style="color: royalblue"><em>é Ímpar!</em></h4>';
+            }
+            document.write(numero + " x " + i + " = "+ resultado + pulaLinha);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serratec 10-07-2020 Manhã</title>
+    </head>
+    <body>
+        <script>
+            /*
+                Objetos javaScript =>   são uma forma de representação de coisas ou objetos reais em forma
+                                        de código.  
+
+            */ 
+            var celular = { // var X { } é um objeto. Dentro de um objeto é possível ter outro objeto.
+                    modelo: "MI9 Pro", 
+                    cor: "Preto", 
+                    tamanho: "10 x 20",
+                    aplicativos: ["Teams", "Facebook", "WhatsApp"],
+                    valor: 1000
+                    };
+             /* as funções  podem estar em qualquer lugar do código ou até em outros arquivos.
+
+             */         
+            function mostrarAlerta(){ // essa função void não tem parametro ()
+                alert ("Fui chamado por outra função!");
+            }
+            function mostrarAlerta2(mensagem){ // essa função void que tem parametro (mensagem)
+                alert(mensagem);
+            }
+            function retornarSeNumeroEParOuImpar(numero){ // função que tem retorno de objeto e tem parametro
+                if (numero % 2 == 0){
+                    return {texo: "Par", numero: numero};
+                }else{
+                    return {texto: "Ímpar", numero: numero};
+                }
+            }
+            //mostrarAlerta();
+            //mostrarAlerta2("Fui passado por parametro");
+            //mostrarAlerta2("Recebo outra mensagem e faço a função de novo");
+
+            var resultado = retornarSeNumeroEParOuImpar;
+            mostrarAlerta2(resultado);         
+        </script>
+    </body>
+</html>

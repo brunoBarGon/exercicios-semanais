@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serratec 09-07-2020-Manhã</title>
+</head>
+<body>
+
+
+    <script>
+        
+        /*
+
+        Fila: Primeiro que entra é o primeiro que sai.
+        Pilha: Primeiro que entra é o último que sai.
+
+        fila.shift(): remove do array a primeira posição. (método do array)
+        pilha.pop(): remove do array a última posição. 
+        pilha.push(): adiciona no array e vai para uma nova última posição.
+        pilha.splice("onde começa", "e quantos quer remover", e colocar outro no lugar): 
+            função para remover alguma coisa do array e possivelmente colocar outra no lugar 
+
+        */ 
+
+        var saladaDeFrutas = [];
+        var adicionarMaisFrutas = true;
+
+        alert("Bem vindos a barraca de frutas online!");
+        var nome = prompt("Digite seu nome");
+        
+
+        var fruta = prompt("Escolha uma fruta"); 
+        saladaDeFrutas.push(fruta); // função .push para adicionar itens ao array.
+
+        while(adicionarMaisFrutas){
+            var resposta = prompt("Deseja adicionar mais frutas? sim ou não?");
+        
+            if(resposta.toLowerCase() == "sim"){ // .toLowerCase() serve para jogar qualquer resposta para minusculo.
+            fruta = prompt("Escolha uma fruta");
+            saladaDeFrutas.push(fruta);
+            }else{
+            adicionarMaisFrutas = false;
+            }
+        }    
+        document.write("Sua salada de frutas está pronta! <br><br>");
+        document.write(nome + " esta é sua cesta de frutas: <br>");
+
+       // for(var i=0; i < saladaDeFrutas.length; i++){
+       //     document.write(saladaDeFrutas[i] + "<br>");
+       // }
+
+        for(f of saladaDeFrutas){ // for/of: substitui o for() tradicional para trabalhar com listas.
+            document.write(f + "<br>"); //   for/of devolve o valor.       
+        }
+
+        // for(f in saladaDeFrutas){
+        //      document.write(saladaDeFrutas[f] + "<br>");    for/in: Nesse caso é devolvida a propriedade    
+        // }                                                   saladaDeFrutas[f] para fazer uma lista.       
+    </script>
+</body>
+</html>
